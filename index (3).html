@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+
+<body>
+  
+</body>
+
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Safaa ❤️</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    overflow: hidden;
+    height: 100vh;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4, #ffd1dc);
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    text-align: center;
+    position: relative;
+    z-index: 10;
+    padding: 20px;
+}
+
+h1 {
+    color: white;
+    font-size: 42px;
+    text-shadow: 0 4px 10px rgba(0,0,0,0.25);
+    animation: glow 2s infinite alternate;
+}
+
+p {
+    color: white;
+    font-size: 21px;
+}
+
+.cake {
+    font-size: 100px;
+    animation: bounce 1.5s infinite;
+}
+
+.heart {
+    position: fixed;
+    top: -30px;
+    font-size: 22px;
+    animation: fall linear forwards;
+    pointer-events: none;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-50px) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-18px);
+    }
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 8px white;
+    }
+    to {
+        text-shadow: 0 0 25px #ff4f81;
+    }
+}
+
+.message {
+    background: rgba(255,255,255,0.2);
+    padding: 15px 25px;
+    border-radius: 20px;
+    backdrop-filter: blur(5px);
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="cake">🎂</div>
+
+    <h1>Happy Birthday, Safaa! ❤️</h1>
+
+    <div class="message">
+        <p>
+            Wishing you a beautiful birthday<br>
+            filled with happiness, love and smiles. 💕
+        </p>
+        <p>
+            You deserve all the beautiful things in the world. 🌹
+        </p>
+    </div>
+
+</div>
+
+<script>
+function createHeart() {
+    const heart = document.createElement("div");
+
+    heart.className = "heart";
+    heart.innerHTML = ["❤️","💕","💗","💖","💘"][Math.floor(Math.random() * 5)];
+
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.fontSize = (15 + Math.random() * 25) + "px";
+
+    const duration = 4 + Math.random() * 5;
+    heart.style.animationDuration = duration + "s";
+
+    document.body.appendChild(heart);
+
+    setTimeout(() => {
+        heart.remove();
+    }, duration * 1000);
+}
+
+setInterval(createHeart, 250);
+</script>
+
+</body>
+</html>
